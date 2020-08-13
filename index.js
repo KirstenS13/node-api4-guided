@@ -5,7 +5,8 @@ const welcomeRouter = require("./welcome/welcome-router")
 const shoutsRouter = require("./shouts/shouts-router")
 
 const server = express()
-const port = 4000
+// server will run on whatever port heroku assigns - it's an environment value
+const port = process.env.PORT || 4000
 
 server.use(express.json())
 server.use(helmet())
